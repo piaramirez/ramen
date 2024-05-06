@@ -1,2 +1,6 @@
 <?php
-echo "Hola";
+class Load{
+    public function __construct(){
+        
+    }
+}
