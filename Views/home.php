@@ -15,10 +15,7 @@
             <div class="itemMenu">
                 <ul class="itemListnav">
                     <div class="item">
-                        <div><a href="">Inicio</a></div>
-                    </div>
-                    <div class="item">
-                        <div><a href="">Menú</a></div>
+                        <div><a href="Menu">Menú</a></div>
                     </div>
                     <div class="item">
                         <div><a href="">Sobre nosotros</a></div>
