@@ -5,14 +5,12 @@ class home extends Controllers{
         
     }
     public function home($param){
-        $this->view->getView($this, "home");
+        $data['page_id'] = 1;
+        $data['tag_page'] =  "いらっしゃいませ | Sora Ramen";
+        $data['page_title'] = "いらっしゃいませ";
+        $data['page_name'] = "Inicio";
+        $this->view->getView($this, "home", $data);
 
     }
-    public function test($param){
-        echo "Datos de los parametros: ".$param;
-    }
-    public function carrito($param){
-        $carrito = $this->model->getCarrito($param);
-        echo $carrito;
-    }
+    
 }

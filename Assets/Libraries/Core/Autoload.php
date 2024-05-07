@@ -1,8 +1,8 @@
 <?php
     spl_autoload_register(function($class){
         
-        if (file_exists(LIBS."Core/".$class.".php")) {
-            require_once(LIBS."Core/".$class.".php");
+        if (file_exists("Assets/Libraries/"."Core/".$class.".php")) {
+            require_once("Assets/Libraries/"."Core/".$class.".php");
             
         }
     });
