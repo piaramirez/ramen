@@ -18,27 +18,12 @@ require_once("Config/Config.php");
             $param = trim($param, ',');
         }
     }
-    //$test = LIBS."Core/".$class.".php";
-    //var_dump($test);
-    spl_autoload_register(function($class){
-        
-        if (file_exists(LIBS."Core/".$class.".php")) {
-            require_once(LIBS."Core/".$class.".php");
-            
-        }
-    });
-    //Load
-    $controllerFile =  "Controllers/".$controller.".php";
-    if(file_exists($controllerFile)){
-        require_once($controllerFile);
-        $controller = new $controller(); 
-        if(method_exists($controller, $metodo)){
-            $controller->{$metodo}($param);
-        }else{
-            echo "No existe, pa";
-        }
-            
-    }else{
-        echo "No existe el controlador";
-    }
+    /*Mandamos a llamar el autoload que tenemos en core para
+    poder acceder a las clases que estamos usando */
+    require_once("Assets/Libraries/Core/Autoload.php");
+    /*
+    Mandamos a llamar el archivo Load con el cual mandamos a llamar los métodos
+    de los controladores
+    */
+    require_once("Assets/Libraries/Core/Load.php");
 ?>

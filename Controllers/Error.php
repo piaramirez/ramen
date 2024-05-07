@@ -1,10 +1,11 @@
 <?php
-class Error extends Controllers{
+class notFound extends Controllers{
     public function __construct(){
-        echo "Estoy desde Error";
         parent::__construct();
     }
     public function notFound(){
         $this->view->getView($this, "Error");
     }
 }
+$notFound = new notFound();
+$notFound->notFound();
