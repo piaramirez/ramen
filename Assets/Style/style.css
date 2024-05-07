@@ -2,12 +2,67 @@
 *Tipografías que usaremos
 **/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+/*Declaramos constantes*/
 :root{
     --textosJaponese: "Noto Sans JP", sans-serif;
+    --colorPrimario:  #C62828;
+    --colorSecundario: #FFD700;
+    --colorComplementario: #000000;
 }
    
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/*
+*Estilos del menú principal
+*/
+.menu-principal{
+    width: 100%;
+    background-color: var(--colorPrimario);
+}
+.estructura-menu{
+width: 90%;
+margin: auto;
+display: flex;
+}
+
+.logoMenu{
+    align-items: center;
+    width: 20%;
+/*  background-color: red;*/
+    display: flex;
+    justify-content: center;
+}
+.logoMenu a{
+    outline: none;
+    text-decoration: none;
+}
+.logoMenu a:visited{
+    color: inherit;
+}
+.logoMenu p{
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 1px 4px var(--colorSecundario);
+    padding: 5px 0;
+}
+.itemMenu{
+    width: 80%;
+    /*background-color: green;*/
+    display: flex;
+    justify-content: flex-end;
+}
+.itemListnav{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    /*background :wheat;*/
+}
+.item{
+    padding: 15px;
+}
+.item:hover{
+    background-color: aquamarine;
 }

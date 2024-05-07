@@ -4,7 +4,7 @@ class home extends Controllers{
         parent::__construct();
         
     }
-    public function home($param){
+    public function home(){
         $data['page_id'] = 1;
         $data['tag_page'] =  "いらっしゃいませ | Sora Ramen";
         $data['page_title'] = "いらっしゃいませ";

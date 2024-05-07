@@ -5,8 +5,8 @@ require_once("Config/Config.php");
     $controller  = $arrUrl[0];
     $metodo = $arrUrl[0];
     $param = "";
-    echo "Controlador: ".$controller."</br>";
-    echo "Método: ".$metodo."</br>";
+    /*echo "Controlador: ".$controller."</br>";
+    echo "Método: ".$metodo."</br>";*/
     if(!empty( $arrUrl[1])){
         if( $arrUrl[1] != ""){
             $metodo = $arrUrl[1];
