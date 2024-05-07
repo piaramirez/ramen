@@ -1,7 +1,7 @@
 <?php
 class Controllers{
     public function __construct(){
-        //echo "Estamos desde controlles </br>";
+        $this->view = new Views();
         $this->loadModel();
     }
     public function loadModel(){
