@@ -5,9 +5,9 @@
 /*Declaramos constantes*/
 :root{
     --textosJaponese: "Noto Sans JP", sans-serif;
-    --colorPrimario:  #EA9828;
-    --colorSecundario: #FFD700;
-    --colorComplementario: #000000;
+    --colorPrimario:  #000000;
+    --colorSecundario: #FF0000;
+    --colorComplementario: #FF9900;
 }
    
 *{
@@ -21,13 +21,13 @@
 .menu-principal{
     width: 100%;
     background-color: var(--colorPrimario);
+    border-bottom: 3px solid var(--colorComplementario);
 }
 .estructura-menu{
 width: 90%;
 margin: auto;
 display: flex;
 }
-
 .logoMenu{
     align-items: center;
     width: 20%;
@@ -45,7 +45,8 @@ display: flex;
 .logoMenu p{
     font-size: 35px;
     font-weight: bold;
-    text-shadow: 1px 4px var(--colorSecundario);
+    color: #fff;
+    text-shadow: 1px 4px var(--colorComplementario);
     padding: 5px 0;
 }
 .itemMenu{
@@ -61,8 +62,15 @@ display: flex;
     /*background :wheat;*/
 }
 .item{
+    align-self: center;
     padding: 15px;
+    font-size: 17px;
+    
 }
 .item:hover{
-    background-color: aquamarine;
+    background-color: var(--colorComplementario);
+}
+.item a{
+    text-decoration: none;
+    color: #fff;
 }

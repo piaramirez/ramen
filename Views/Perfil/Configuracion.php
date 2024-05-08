@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    Que pedo
+   <ul>
+    <li>usuaer</li>
+    <a href="Configuracion/Usuarios?=<?php echo $data['tag_page']; ?>">Usuarios</a>
+   </ul>
 </body>
 </html>

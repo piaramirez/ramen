@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    
+    <link rel="stylesheet" href="Assets/Style/style.css">
 </head>
 <body>
-    
+<?php require_once("Views/Estructura/menu.php"); ?>
     <h1>Este es el Menu</h1>
     <a href="home">MEnu</a>
     <div class="">
