@@ -11,6 +11,11 @@
                
             }else if($controller == "Menu"){
                 $view = "Views/".$view.".php";
+            }elseif($controller == "Perfil"){
+                $view = "Views/".$view.".php";
+            }elseif($controller == "Perfil/Configuracion"){
+                $view = "Views/".$view.".php";
+                var_dump($view);
             }else{
                 $view = "Views/".$controller."/".$view.".php";
             }
