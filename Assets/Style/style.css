@@ -20,8 +20,11 @@
 */
 .menu-principal{
     width: 100%;
-    background-color: var(--colorPrimario);
+    background-color:transparent;
+    position: fixed;
+   /* background-color: var(--colorPrimario);*/
     border-bottom: 3px solid var(--colorComplementario);
+    z-index: 1;
 }
 .estructura-menu{
 width: 90%;
@@ -73,4 +76,43 @@ display: flex;
 .item a{
     text-decoration: none;
     color: #fff;
+}
+.item  div{
+    display: flex;
+    align-items: center;
+}
+.iconosMenu{
+    width: 30px;
+    margin-right: 10px;
+}
+/*Empezamos a maquetar home*/
+.imgCabecera{
+    position: relative;
+}
+.imgCabecera img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.imgCabecera .degradado{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    opacity: 0.8; 
+}
+.imgCabecera h1{
+    
+    font-size: 48px;
+ 
+}
+.inicioPreubas{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    z-index: 1;
+   color: #fff;
 }

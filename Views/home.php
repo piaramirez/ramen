@@ -8,8 +8,19 @@
 </head>
 <body>
     <?php require_once("Views/Estructura/menu.php"); ?>
+    <div class="cabeceraHome">
+        <div class="imgCabecera">
+            <img src="Assets/Img/fondo.jpg" alt="">
+           <div class="inicioPreubas">
+           <h1><?php echo $data['page_title'] ?></h1>
+           <p>pepepepepepepep</p>
+           </div>
+            <div class="degradado"></div>
+           
+        </div>
+    </div>
     <div id="<?php echo($data['page_id']); ?>"></div>
-    <h1><?php echo $data['page_title'] ?></h1>
-    <a href="Login">Login</a>
+    
+
 </body>
 </html>
