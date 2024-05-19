@@ -13,13 +13,16 @@
             <img src="Assets/Img/fondo.jpg" alt="">
            <div class="inicioPreubas">
            <h1><?php echo $data['page_title'] ?></h1>
-           <p>pepepepepepepep</p>
+           <p>Bienvenidos</p>
            </div>
             <div class="degradado"></div>
            
         </div>
     </div>
-    <div id="<?php echo($data['page_id']); ?>"></div>
+    <main class="ProductosyServiciosHome">
+    <?php echo $data['page_prubas'] ?>
+
+    </main>
     
 
 </body>

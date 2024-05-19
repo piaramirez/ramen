@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-   <ul>
-    <li>usuaer</li>
-    <a href="Configuracion/Usuarios?=<?php echo $data['tag_page']; ?>">Usuarios</a>
-   </ul>
+Aquí va configuración
 </body>
 </html>
