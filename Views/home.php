@@ -20,21 +20,21 @@
         </div>
     </div>
     <main class="ProductosyServiciosHome">
-        <div class="">
-            <h1>Conoce nuestros productos más vendidos</h1>
+        <div class="imgTituloInicio">
+           <img src="<?php echo media(); ?>Img/Iconos/cubiertos.png" alt="Ícono de cubiertos"> 
+           <h1>Conoce nuestros productos más vendidos</h1>
         </div>
+    <div class="barraProductos">
     <?php foreach ($data['page_productos'] as $productosI) { ?>
-           <div class="">
-           <img src="<?php echo $productosI['fotoProducto'] ?>" alt="">
-            <h2><?php echo $productosI['nombreProducto'] ?></h2>
-            <p><?php echo $productosI['descripcionProducto'] ?></p>
-            <p><?php echo $productosI['precioProducto'] ?></p>
-           
-           </div>
-    <?php
-    }
-
-    ?>
+            <div class="cardProductos">
+            <img src="<?php echo $productosI['fotoProducto'] ?>" alt="">
+                <h2><?php echo $productosI['nombreProducto'] ?></h2>
+                <p><?php echo $productosI['descripcionProducto'] ?></p>
+                <p><?php echo $productosI['precioProducto'] ?></p>
+            
+            </div>
+        <?php } ?>
+    </div>
     <div class="servicios">
         Aquí va los servicios que ofrecemos
     </div>
@@ -51,6 +51,6 @@
         </form>
     </div>
     
-
+<script src="Assets/JS/js.js"></script>
 </body>
 </html>
