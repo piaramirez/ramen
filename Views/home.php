@@ -20,9 +20,36 @@
         </div>
     </div>
     <main class="ProductosyServiciosHome">
-    <?php echo $data['page_prubas'] ?>
+        <div class="">
+            <h1>Conoce nuestros productos más vendidos</h1>
+        </div>
+    <?php foreach ($data['page_productos'] as $productosI) { ?>
+           <div class="">
+           <img src="<?php echo $productosI['fotoProducto'] ?>" alt="">
+            <h2><?php echo $productosI['nombreProducto'] ?></h2>
+            <p><?php echo $productosI['descripcionProducto'] ?></p>
+            <p><?php echo $productosI['precioProducto'] ?></p>
+           
+           </div>
+    <?php
+    }
+
+    ?>
+    <div class="servicios">
+        Aquí va los servicios que ofrecemos
+    </div>
 
     </main>
+    <div class="contactanos">
+        <h2>Contactanos</h2>
+        <p>Si tienes alguna duda o sugerencia, no dudes en contactarnos</p>
+        <form action="">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
     
 
 </body>

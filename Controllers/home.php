@@ -9,9 +9,9 @@ class home extends Controllers{
         $data['tag_page'] =  "いらっしゃいませ | Sora Ramen";
         $data['page_title'] = "いらっしゃいませ";
         $data['page_name'] = "Inicio";
-        $test = $this->model->getUSers(3);
-        var_dump($test);
-        $data['page_prubas'] = $test['nombreUser'];
+        $datosProducto = $this->model->getProducto();
+       // echo formant($test);
+        $data['page_productos'] = $datosProducto;
         $this->view->getView($this, "home", $data);
 
         
@@ -31,11 +31,19 @@ class home extends Controllers{
      * pruebas de traer todo
      */
     public function datos(){
-        $data = $this->model->getUsers($id);
+        $data = $this->model->getUser($id);
         print_r($data);
     }
-    public function actualizas(){
+    public function actualizas($id){
         $data = $this->model->updateUser(4,"Padrinazo","worales");
+        print_r($data);
+    }
+    public function traerTodo(){
+        $data = $this->model->getUsers();
+        print_r($data);
+    }
+    public function eliminar($id){
+        $data = $this->model->deleteUser($id);
         print_r($data);
     }
 }

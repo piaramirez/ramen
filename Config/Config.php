@@ -8,3 +8,5 @@ const DB_NAME = "soraRamen";
 const DB_USER =   "piaRam";
 const DB_PASSWORD = "17A07n95t";
 const DB_CHARSET = "charset=utf8";
+const SPD =  ",";
+const SPM = ".";

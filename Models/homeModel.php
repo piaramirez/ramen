@@ -19,7 +19,7 @@ class homeModel extends Mysql{
     /**
      * Creamos la función para traer todos los datos
      */
-    public function getUsers($id){
+    public function getUser($id){
 
       $sql = "SELECT * FROM Usuarios";
       $request = $this->buscarDatos($sql);
@@ -31,6 +31,22 @@ class homeModel extends Mysql{
       $arrayData = array($nombre, $correo);
       //var_dump($sql, $arrayData, "Datos dentro de updateUser <br>");
       $request = $this->actualizarDatos($sql, $arrayData);
+      return $request;
+    }
+    public function getUsers(){
+
+      $sql = "SELECT * FROM Usuarios";
+      $request = $this->SelectAll($sql);
+      return $request;
+    }
+    public function deleteUser(int $id){
+      $sql = "DELETE FROM Usuarios WHERE idusuarios = $id";
+      $request = $this->eliminarDatos($sql);
+      return $request;
+    }
+    public function getProducto(){
+      $sql = "SELECT * FROM Productos";
+      $request = $this->SelectAll($sql);
       return $request;
     }
 }

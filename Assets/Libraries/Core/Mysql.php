@@ -43,8 +43,8 @@ class Mysql extends Conexion{
     /**
      * Cramo una funcion que nos de todos los datos
      */
-    public function SelectAll(string $query){
-        $thios->strquery = $query;
+    public function SelectAll(string $strquery){
+        $this->strquery = $strquery;
         $result = $this->conexion->prepare($this->strquery);
         $result->execute();
         $data = $result->fetchall(PDO::FETCH_ASSOC);
