@@ -16,6 +16,9 @@
             }elseif($controller == "Perfil/Configuracion"){
                 $view = "Views/".$view.".php";
                 var_dump($view);
+            }elseif($controller == "Roles"){
+                $view = "Views/".$view.".php";
+
             }else{
                 $view = "Views/".$controller."/".$view.".php";
             }

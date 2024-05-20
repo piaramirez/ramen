@@ -25,25 +25,76 @@
            <h1>Conoce nuestros productos más vendidos</h1>
         </div>
     <div class="barraProductos">
-    <?php foreach ($data['page_productos'] as $productosI) { ?>
+        <?php foreach ($data['page_productos'] as $productosI) { ?>
             <div class="cardProductos">
-            <img src="<?php echo $productosI['fotoProducto'] ?>" alt="">
-                <h2><?php echo $productosI['nombreProducto'] ?></h2>
-                <p><?php echo $productosI['descripcionProducto'] ?></p>
-                <p><?php echo $productosI['precioProducto'] ?></p>
-            
+                <img src="<?php echo $productosI['fotoProducto'] ?>" alt="">
+                <div class="contenidocardProductos">
+                    <h2><?php echo $productosI['nombreProducto'] ?></h2>
+                    <p><?php echo $productosI['descripcionProducto'] ?></p>   
+                </div>  
+                <div class="footerCardProductos">
+                   <div class="pedidoPrecio">
+                   +
+                   <p>$<?php echo formatMoney($productosI['precioProducto']) ?>.mx</p>
+                   </div>
+                    <a href="Producto/Ramen/<?php  echo $productosI['idProducto'] ?>">Ver más</a>
+                </div>       
             </div>
         <?php } ?>
     </div>
     <div class="servicios">
-        Aquí va los servicios que ofrecemos
+        <div class="datosServicios">
+            <img src="<?php echo media() ?>/Img/Iconos/onigiri.png" alt="">
+            <h2>¡Conoce nuestro menú!</h2>
+            <p>Conoce nuesta variedad de platillos preparado por  cheffs japoneses</p>
+            <div class="barraBoton">
+                <a class="botonNaranja" href="Menu">Menu</a>
+            </div>
+        </div>
+        <div class="datosServicios">
+            <img src="<?php echo media() ?>/Img/Iconos/sushi.png" alt="">
+            <h2>Contamos con buffet</h2>
+            <p>Conoce nuesta variedad de platillos preparado por  cheffs japoneses</p>
+            <div class="barraBoton">
+                <a class="botonNaranja" href="Servicios">Servicios</a>
+            </div>
+        </div>
+        <div class="datosServicios">
+            <img src="<?php echo media() ?>/Img/Iconos/sushillevar.png" alt="">
+            <h2>Servicio de evento</h2>
+            <p>Conoce nuesta variedad de platillos preparado por  cheffs japoneses</p>
+            <div class="barraBoton">
+                <a class="botonNaranja" href="Servicios">Información</a>
+            </div>
+        </div>
+        <div class="datosServicios">
+            <img src="<?php echo media() ?>/Img/Iconos/entregadomicilio.png" alt="">
+            <h2>Pide a domicilio</h2>
+            <p>Conoce nuesta variedad de platillos preparado por  cheffs japoneses</p>
+            <div class="barraBoton">
+                <a class="botonNaranja" href="Login">Pide ya!</a>
+            </div>
+        </div>
+        <div class="datosServicios">
+            <img src="<?php echo media() ?>/Img/Iconos/reservacion.png" alt="">
+            <h2>Reserva tu lugar</h2>
+            <p>Conoce nuesta variedad de platillos preparado por  cheffs japoneses</p>
+            <div class="barraBoton">
+                <a class="botonNaranja" href="Login">Pide ya!</a>
+            </div>
+        </div>
+        <div class="datosServicios">
+            <img src="<?php echo media() ?>/Img/Iconos/reservacion.png" alt="">
+            <h2>Informativa</h2>
+            <p>Esta página sólo es Informativa</p>
+        </div>
     </div>
 
     </main>
     <div class="contactanos">
         <h2>Contactanos</h2>
-        <p>Si tienes alguna duda o sugerencia, no dudes en contactarnos</p>
-        <form action="">
+        <p>no te esperes más</p>
+        <form class="formularioIndex" action="">
             <input type="text" placeholder="Nombre">
             <input type="email" placeholder="Correo">
             <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>

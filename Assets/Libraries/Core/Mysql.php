@@ -20,13 +20,13 @@ class Mysql extends Conexion{
         $insert = $this->conexion->prepare($this->strquery);
       
         $restInsert = $insert->execute($this->arrValues);
-        var_dump($restInsert, "Datos dentro de insert Rest <br>");
+        //var_dump($restInsert, "Datos dentro de insert Rest <br>");
         if($restInsert){
             $lastInsert = $this->conexion->lastInsertId();
-            echo "Este es el último id insertado: ".$lastInsert;
+            //echo "Este es el último id insertado: ".$lastInsert;
         }else{
             $lastInsert= 0;
-            echo "No se pudo insertar";
+            //echo "No se pudo insertar";
         }  
         return $lastInsert;
     }
