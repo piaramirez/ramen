@@ -101,7 +101,18 @@
             <input type="submit" value="Enviar">
         </form>
     </div>
-    
+    <div id="myModal" class="modal">
+  <div class="modal-content">
+    <h1>Ups</h1>
+    <p>Esta página fue creada con el fin de exponer en emprendimiento 1. </br>
+    La página fue descativada por el Administrador
+<span>PEDRO ANTONIO RAMÍREZ ALCÁNTARA.</span></br>
+para más información. 
+pia@portafoliopiaramirez.tech</p>
+    <a href="Roles" id="indexBtn">Proyecto WEB</a>
+  </div>
+</div>
+
 <script src="Assets/JS/js.js"></script>
 </body>
 </html>

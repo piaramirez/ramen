@@ -50,11 +50,11 @@
     <div class="formularioRoles">
         <form method="get" id="formRol">
             <div class="grupClassRoles">
-                <label for="nombreRol">NombreRol</label>
+                <label for="nombreRol">Nombre del integrante</label>
                 <input type="text" name="textNrol" id="textNrol">
             </div>
             <div class="grupClassRoles">
-                <label for="Descpricion">Descripcion</label>
+                <label for="Descpricion">Historia</label>
                <textarea name="descripcionRol" id="descripcionRol"></textarea>
             </div>
             <div class="grupClassRoles">

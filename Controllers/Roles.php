@@ -7,7 +7,7 @@ class Roles extends Controllers {
     public function Roles() {
         $data['page_id'] = 3;
         $data['tag_page'] = "Roles de usuarios | Sora Ramen";
-        $data['page_title'] = "Módulo Roles";
+        $data['page_title'] = "Agrega a tu Akatsuki";
         $data['page_name'] = "Roles";
         $this->view->getView($this, "Roles/Roles", $data);
     }
