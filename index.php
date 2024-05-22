@@ -21,7 +21,7 @@ require_once("Helpers/Helpers.php");
             }
             $param = trim($param, ',');   
         }
-        echo "Parámetros: ".$param."</br>";
+        //echo "Parámetros: ".$param."</br>";
     }
     /*Mandamos a llamar el autoload que tenemos en core para
     poder acceder a las clases que estamos usando */

@@ -56,13 +56,13 @@ class Mysql extends Conexion{
     public function actualizarDatos(string $strquery, array $arrValues){
         $this->strquery = $strquery;
         $this->arrValues = $arrValues;
-        echo "Consulta preparada: " . $this->strquery . "<br>";
-        echo "Valores: " . implode(", ", $this->arrValues) . "<br>";
+        //echo "Consulta preparada: " . $this->strquery . "<br>";
+        //echo "Valores: " . implode(", ", $this->arrValues) . "<br>";
         $update = $this->conexion->prepare($this->strquery);
       // var_dump($update, $arrValues);
-      var_dump($this->arrValues,  "Datos dentro de actualizar <br>");
+      //var_dump($this->arrValues,  "Datos dentro de actualizar <br>");
         $resExecute = $update->execute($this->arrValues);
-        var_dump($resExecute,  "Datos dentro de actualizar2 <br>");
+        //var_dump($resExecute,  "Datos dentro de actualizar2 <br>");
         return $resExecute;
     }
     /**

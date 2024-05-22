@@ -108,7 +108,7 @@
     La página fue descativada por el Administrador
 <span>PEDRO ANTONIO RAMÍREZ ALCÁNTARA.</span></br>
 para más información. 
-pia@portafoliopiaramirez.tech</p>
+<a href="mailto:pia@portafoliopiaramirez.tech">pia@portafoliopiaramirez.tech</a></p>
     <a href="Roles" id="indexBtn">Proyecto WEB</a>
   </div>
 </div>
