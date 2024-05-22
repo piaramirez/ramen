@@ -706,3 +706,6 @@ overflow: auto;;
         margin: 10px auto;
     }
   }
+.dataTables_info, .dataTables_paginate, .paging_simple_numbers{
+    display: none;
+}

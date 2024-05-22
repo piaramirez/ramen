@@ -39,20 +39,24 @@ class RolesModel extends Mysql{
 
         }
     }
-    public function updateRol(int $intIdRol,string $strRol,string  $strMentor, string $strAldea, string $strDescripcion){
+    public function updateRol(int $intIdRol,string $strRol,string  $strDescripcion, string $strAldea, string $strMentor){
         $this->intIdRol = $intIdRol;
         $this->strRol = $strRol;
         $this->strDescripcion = $strDescripcion;
         $this->strAldea = $strAldea;
         $this->strMentor = $strMentor;
-        $sql = " SELECT * FROM areaTrabajo WHERE nombreaTrabajo = '{$this->strRol}' AND idaTrabajo = {$this->intIdRol}";
+        $sql = " SELECT * FROM areaTrabajo WHERE idaTrabajo = {$this->intIdRol}";
         $request = $this->SelectAll($sql);
-        if (empty($request)) {
-            $sql = "UPDATE areaTrabajo set nombreaTrabajo = ?, despcionTrabajo = ?, aldeaTrabajo = ?, mentorTrabajo = ? where idaTrabajo = $this->intIdRol";
+       //var_dump("DAtos que vienen de resque antes if", $request);
+        //cho "dartos";
+        if (!empty($request)) {
+            //echo "dentro de emptu";
+            $sql = "UPDATE areaTrabajo set nombreaTrabajo = ?, despcionTrabajo = ?, aldeaTrabajo = ?, mentorTrabajo = ? where idaTrabajo = {$this->intIdRol}";
             $arrData = array($this->strRol, $this->strDescripcion, $this->strAldea, $this->strMentor);
             //var_dump("DAtos que vienen ed arr", $arrData);
+            //var_dump("DAtos que vienen ed arr", $arrData);
             $request = $this->actualizarDatos($sql, $arrData);
-            //var_dump("DAtos que vienen", $request); 
+            //var_dump("DAtos que vienen de resque ya cargado", $request); 
 
         }else{
             $request = "exist";
@@ -60,4 +64,28 @@ class RolesModel extends Mysql{
         //var_dump($request);
         return $request;
     }
+    public function deleteRol(int $intIdRol) {
+        $this->intIdRol = $intIdRol;
+        $sql = "DELETE FROM areaTrabajo WHERE idaTrabajo = $this->intIdRol";    
+        $request = $this->eliminarDatos($sql);
+    
+        if ($request) {
+            // La eliminación fue exitosa
+            $response = array(
+                'status' => true,
+                'message' => 'El rol fue eliminado exitosamente.'
+            );
+        } else {
+            // Hubo un error en la eliminación
+            $response = array(
+                'status' => false,
+                'message' => 'Hubo un error al intentar eliminar el rol.'
+            );
+        }
+    
+        // Devuelve la respuesta como un JSON
+        header('Content-Type: application/json');
+        echo json_encode($response);
+    }
+    
 }

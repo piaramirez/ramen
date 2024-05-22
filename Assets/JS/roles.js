@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /*Editar info de roles */
     window.addEventListener('load', function(){
         editarRol();
+        eliminarRol();
     }, false);
     function editarRol(){
         document.addEventListener('click', function(event){
@@ -243,9 +244,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     }
-    /**Formulario editar eliminar */
-    
-    
+    /** Eliminar */
+    function eliminarRol(){
+        //alert(' GHola');
+        document.addEventListener('click', function(event){
+            if(event.target && event.target.classList.contains('btnEliminarRol')){
+                var confirmacion = confirm("¿Estás seguro de que deseas eliminar este rol?");
+                var idrol = event.target.getAttribute("idEditarE");
+                if(confirmacion){
+                    var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+                    var ajaxUrl = base_url + 'Roles/delRol/'+idrol;
+                    request.open("POST", ajaxUrl, true);
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    request.send();
+                    request.onreadystatechange = function() {
+                        if(request.readyState == 4){
+                            if(request.status == 200){
+                                alert("Rol eliminado exitosamente.");
+                                location.reload();
+                                var objData = JSON.parse(request.responseText);
+                            if (objData.status && objData.status) {
+                                alert("Rol eliminado exitosamente."); // Mensaje de éxito
+                                location.reload();// Recargar la página
+                            } else {
+                                alert(objData.msg);
+                                }
+                            }else{
+                                alert('Error en la solicitud: ' + request.statusText);
+                            }
+                        }
+                    }
+                }
+                //alert(idrol);
+            }
+        });
+    }
+
+
+
+
+
+
     $('#mentores').on('change', function() {
         const selectedMentor = $(this).val();
         const imageSrc = villageImages[selectedMentor] || base_url + "Assets/Img/logo.png"; // Default image if no match

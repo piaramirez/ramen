@@ -28,7 +28,8 @@ class Roles extends Controllers {
         foreach ($response['data'] as $key => $value) {
             
             $response['data'][$key]['Opciones'] = '
-            <button class="btnEditarRol" idEditarE="'.$response['data'][$key]['idaTrabajo'].'" title="Editar">Edit </button>';
+            <button class="btnEditarRol" idEditarE="'.$response['data'][$key]['idaTrabajo'].'" title="Editar">Edit </button>
+            <button class="btnEliminarRol" idEditarE="'.$response['data'][$key]['idaTrabajo'].'" title="Editar" id="btnEliminarRol">Eliminar </button>';
         }
         //echo format($data);
         header('Content-Type: application/json');
@@ -104,8 +105,8 @@ class Roles extends Controllers {
             $strAldea = strClean($_POST['idEstatusE']);
             $strDescripcion = strClean($_POST['descripcionRolE']);
             //var_dump("datos de setUpdate",$intIdRol, $strRol, $strMentor, $strAldea, $strDescripcion);
-            $resq_rol = $this->model->updateRol($intIdRol,$strRol, $strMentor, $strAldea, $strDescripcion);
-
+            $resq_rol = $this->model->updateRol($intIdRol,$strRol, $strDescripcion, $strAldea, $strMentor);
+            //var_dump("datos de setUpdate2",$resq_rol);
 
             if ($resq_rol > 0) {   
                  $arrResponse = array('status' => true, 'msg' => 'Datos actualizados correctamente.');
@@ -118,6 +119,14 @@ class Roles extends Controllers {
             $arrResponse = array('status' => false, 'msg' => $e->getMessage());
         }
        
+        header('Content-Type: application/json');
+        echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+    public function delRol($id)  {
+        $intIdRol = intval(strClean($id));
+        $requestDelete  = $this->model->deleteRol($intIdRol);
+        //var_dump("daros eliminar", $requestDelete);
         header('Content-Type: application/json');
         echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
         die();
